@@ -1,7 +1,5 @@
 Information About the Post
-<ul>
-  <li> <%= @author.name %></li>
-  <li> <%= @author.hometown %></li>
-</ul>
+<% render partial: "authors/author", locals: {post_author: @post.author} %>
+  #telling Rails where to render               #hash key's creates a local variable & p_a is the argument name
 <%= @post.title %>
 <%= @post.content %>
